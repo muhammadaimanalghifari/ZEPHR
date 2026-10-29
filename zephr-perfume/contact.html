@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZEPHR &mdash; Haute Parfumerie Pour Homme | Contact Us</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23090A0C%22/><text y=%22.75em%22 x=%2250%25%22 font-family=%22serif%22 font-weight=%22bold%22 text-anchor=%22middle%22 font-size=%2265%22 fill=%22%23C5A059%22>Z</text></svg>">
+</head>
+<body class="viewport-desktop">
+
+  <!-- Wireframe & Viewport Inspection Toolbar -->
+  <aside class="wireframe-toolbar">
+    <div class="toolbar-brand">
+      <span class="badge-masculine">PARFUM MASKULIN</span>
+      <span>ZEPHR ATELIER SPEC &bull; CONTACT US</span>
+    </div>
+    <div class="toolbar-controls">
+      <div class="viewport-switchers">
+        <button class="btn-viewport active" data-viewport="desktop" title="Desktop 12-Column Layout">Desktop (12 Kolom)</button>
+        <button class="btn-viewport" data-viewport="tablet" title="Tablet 10-Column Layout">Tablet (10 Kolom)</button>
+        <button class="btn-viewport" data-viewport="mobile" title="Smartphone Layout">HP (Mobile)</button>
+      </div>
+      <label class="toggle-switch-wrapper" title="Tampilkan Panduan Grid Pink Wireframe 12 Kolom">
+        <span class="switch">
+          <input type="checkbox" id="wireframe-mode-toggle">
+          <span class="slider"></span>
+        </span>
+        <span>Grid Guides (Pink)</span>
+      </label>
+    </div>
+  </aside>
+
+  <!-- 12-Column Pink Wireframe Grid Overlay -->
+  <div class="wireframe-grid-overlay" aria-hidden="true">
+    <div class="overlay-container">
+      <div class="overlay-col" data-col="1"></div>
+      <div class="overlay-col" data-col="2"></div>
+      <div class="overlay-col" data-col="3"></div>
+      <div class="overlay-col" data-col="4"></div>
+      <div class="overlay-col" data-col="5"></div>
+      <div class="overlay-col" data-col="6"></div>
+      <div class="overlay-col" data-col="7"></div>
+      <div class="overlay-col" data-col="8"></div>
+      <div class="overlay-col" data-col="9"></div>
+      <div class="overlay-col" data-col="10"></div>
+      <div class="overlay-col" data-col="11"></div>
+      <div class="overlay-col" data-col="12"></div>
+    </div>
+  </div>
+
+  <div class="grid-spec-indicator" id="grid-spec-text">
+    <strong>Desktop Wireframe</strong> &bull; Gutter: 0.85 cm &bull; Column: 12 &bull; Margin: 8.47 cm &bull; Contact Split
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top-row">
+        <!-- Logo Box + Brand Title -->
+        <a href="index.html" class="brand-wrapper">
+          <div class="brand-logo-box">LOGO</div>
+          <div class="brand-titles">
+            <span class="brand-title">ZEPHR</span>
+            <span class="brand-tagline">PARFUMS POUR HOMME &bull; BANDUNG</span>
+          </div>
+        </a>
+
+        <!-- Capsule Search Input in Header -->
+        <div class="header-search-bar">
+          <div class="search-pill-box">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+            </svg>
+            <input type="text" placeholder="Cari layanan, alamat atelier, kontak..." onkeydown="if(event.key==='Enter'){window.location.href='product.html?q='+encodeURIComponent(this.value);}">
+          </div>
+        </div>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <button class="lang-selector" id="lang-selector-btn" title="Ganti Bahasa">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            LANGUAGE : IDN
+          </button>
+          
+          <button class="icon-btn" title="Private Gentlemen Concierge" onclick="showToast('ZEPHR Concierge: Layanan Konsultasi Aktif.')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+            </svg>
+          </button>
+          
+          <button class="icon-btn" id="cart-open-btn" title="Lihat Troli Belanja">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4H6z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 01-8 0"/>
+            </svg>
+            <span class="cart-count-badge" style="display:none;">0</span>
+          </button>
+
+          <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" title="Menu Navigasi">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gold Navigation Bar -->
+    <nav class="gold-nav-bar">
+      <div class="container">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">HOME</a></li>
+          <li><a href="about.html" class="nav-link">ABOUT US</a></li>
+          <li><a href="product.html" class="nav-link">PRODUCT</a></li>
+          <li><a href="contact.html" class="nav-link active">CONTACT US</a></li>
+        </ul>
+        <div class="nav-scent-quote">
+          &ldquo;Private Scent Consultation &bull; Bandung Atelier&rdquo;
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content: Contact Us Split matching Wireframe 4 -->
+  <main class="wireframe-page-wrapper">
+    <div class="container">
+      
+      <div class="contact-wireframe-split">
+        
+        <!-- Left Column: Contact Information matching Wireframe exactly -->
+        <div class="contact-info-panel">
+          <div class="contact-brand-header">
+            <h3>ZEPHR ATELIER &bull; BANDUNG</h3>
+            <p>Rumah Parfum Pria Mewah. Konsultasi pemilihan wewangian bespoke, private allocation, dan pengiriman aman ke seluruh nusantara.</p>
+          </div>
+
+          <!-- Entries as labeled in wireframe: Mail, Contact, Based In -->
+          <div class="contact-details-list">
+            
+            <div class="contact-entry-item">
+              <span class="contact-label-tag">Mail</span>
+              <div class="contact-value-text">
+                <a href="mailto:cs@zephr.com">cs@zephr.com</a>
+              </div>
+            </div>
+
+            <div class="contact-entry-item">
+              <span class="contact-label-tag">Contact</span>
+              <div class="contact-value-text">
+                <a href="tel:+6289529114752">+62 895 2911 4752</a>
+              </div>
+            </div>
+
+            <div class="contact-entry-item">
+              <span class="contact-label-tag">Based in</span>
+              <div class="contact-value-text">
+                Jl. Industri, Bandung, Jawa Barat
+              </div>
+            </div>
+
+            <div class="contact-entry-item">
+              <span class="contact-label-tag">Jam Operasional</span>
+              <div class="contact-value-text" style="font-size: 0.88rem; color: #A9B2BF;">
+                Senin &ndash; Sabtu: 09:00 &ndash; 21:00 WIB<br>
+                <em style="color: var(--color-gold-light);">Private Lounge appointment by reservation only.</em>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Direct Communication Actions -->
+          <div class="contact-direct-actions">
+            <a href="https://wa.me/6289529114752?text=Halo%20ZEPHR%20Parfums%2C%20saya%20ingin%20konsultasi%20pemilihan%20wewangian%20maskulin%20bespoke." target="_blank" class="btn-contact-action btn-contact-whatsapp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/>
+              </svg>
+              HUBUNGI WHATSAPP LANGSUNG
+            </a>
+            <a href="tel:+6289529114752" class="btn-contact-action btn-contact-call">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              TELEPON ATELIER BANDUNG
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Rounded Form Card with Yellow KIRIM button from Wireframe -->
+        <div class="contact-form-panel">
+          <h2 class="form-panel-title">KONSULTASI AROMA &amp; PESANAN BESPOKE</h2>
+          <p class="form-panel-subtitle">Isi formulir di bawah ini untuk terhubung dengan Master Perfumer atau tim Private Concierge kami.</p>
+
+          <form id="zephr-contact-form">
+            
+            <!-- TULIS NAMAMU... -->
+            <div class="wireframe-form-group">
+              <input type="text" id="contact-name" class="wireframe-input-field" placeholder="TULIS NAMAMU..." required>
+            </div>
+
+            <!-- TULIS EMAILMU... (or Mail as indicated in wireframe) -->
+            <div class="wireframe-form-group">
+              <input type="email" id="contact-email" class="wireframe-input-field" placeholder="TULIS EMAILMU (MAIL)..." required>
+            </div>
+
+            <!-- Topic / Interest -->
+            <div class="wireframe-form-group">
+              <select id="contact-topic" class="wireframe-input-field" style="cursor: pointer; color: var(--color-obsidian);">
+                <option value="Konsultasi Parfum Personal">TOPIK: Konsultasi Parfum Personal (Menentukan Signature Scent)</option>
+                <option value="Pemesanan Private Reserve">TOPIK: Pemesanan Private Reserve (Edisi Terbatas)</option>
+                <option value="Corporate Gift &amp; VIP Hamper">TOPIK: Corporate Gift &amp; Hamper Pria Mewah</option>
+                <option value="Pertanyaan Pengiriman &amp; Layanan">TOPIK: Pertanyaan Pengiriman &amp; Layanan Pelanggan</option>
+              </select>
+            </div>
+
+            <!-- TULIS PESAN MU... -->
+            <div class="wireframe-form-group">
+              <textarea id="contact-message" class="wireframe-input-field" placeholder="TULIS PESAN MU (Karakter aroma yang Anda sukai, acara penggunaan, atau pertanyaan khusus)..." required></textarea>
+            </div>
+
+            <!-- Big Yellow KIRIM Button from Wireframe -->
+            <button type="submit" class="btn-wireframe-kirim" id="btn-contact-submit">
+              KIRIM
+            </button>
+
+          </form>
+
+          <div style="margin-top: 18px; text-align: center; font-size: 0.73rem; color: var(--color-text-muted);">
+            Privasi Anda terjamin. Data kontak hanya digunakan untuk konsultasi resmi ZEPHR Parfums.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Site Footer (Exact Match to Wireframe Spec) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-row">
+        <h2 class="footer-brand-title">ZEPHR</h2>
+        <div class="footer-social-icons">
+          <a href="https://facebook.com" target="_blank" rel="noreferrer" class="social-icon-btn" title="Facebook">f</a>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" class="social-icon-btn" title="Instagram">&#9825;</a>
+          <a href="https://tiktok.com" target="_blank" rel="noreferrer" class="social-icon-btn" title="TikTok">&#9834;</a>
+          <a href="https://wa.me/6289529114752" target="_blank" rel="noreferrer" class="social-icon-btn" title="WhatsApp Concierge">&#128172;</a>
+        </div>
+      </div>
+
+      <div class="footer-columns-grid">
+        <div class="footer-about-col">
+          <p>
+            ZEPHR Parfums adalah atelier wewangian pria mewah berbasis di Bandung, Jawa Barat. Kami memadukan bahan alami paling langka di nusantara dan dunia dengan standar seni parfum haute-parfumerie untuk pria berkarakter tegas.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">MORE FROM ZEPHR &gt;</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT ZEPHR</a></li>
+            <li><a href="product.html">OUR PRODUCT</a></li>
+            <li><a href="contact.html">CONNECT WITH US</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">SEE MORE STORIES &gt;</h4>
+          <ul class="footer-links-list">
+            <li><a href="#" onclick="openCinemaModal('THE SCIENCE OF SILLAGE'); return false;">The Science of Scent Sillage</a></li>
+            <li><a href="#" onclick="openCinemaModal('HOW TO LAYER MASCULINE NOTES'); return false;">How to Layer Masculine Notes</a></li>
+            <li><a href="#" onclick="openCinemaModal('MASERASI ARCHIVES 2026'); return false;">Maceration Archives 2026</a></li>
+            <li><a href="#" onclick="openCinemaModal('HARVESTING JAVA VETIVER'); return false;">Harvesting Java Vetiver Root</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">PRIVATE CONCIERGE</h4>
+          <ul class="footer-links-list">
+            <li><a href="contact.html">Jl. Industri, Bandung, Jawa Barat</a></li>
+            <li><a href="tel:+6289529114752">+62 895 2911 4752</a></li>
+            <li><a href="mailto:cs@zephr.com">cs@zephr.com</a></li>
+            <li><span style="color:var(--color-gold); font-size:0.75rem;">Senin &ndash; Sabtu: 09:00 &ndash; 21:00 WIB</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-sub-bottom">
+        <div class="footer-region-badge">
+          <span class="region-indicator">Fashion &amp; Beauty &bull; Indonesia &gt;</span>
+          <span>&copy; 2026 ZEPHR Parfums Atelier Bandung. Hak Cipta Dilindungi.</span>
+        </div>
+        <div class="footer-legal-row">
+          <a href="#" onclick="showToast('User Agreement: Ketentuan layanan.'); return false;">USER AGREEMENT</a>
+          <span>|</span>
+          <a href="#" onclick="showToast('Privacy Policy: Enkripsi data pelanggan.'); return false;">PRIVACY POLICY</a>
+          <span>|</span>
+          <a href="#" onclick="showToast('Accessibility: Standar WCAG 2.1 AA.'); return false;">ACCESSIBILITY HELP</a>
+          <span>|</span>
+          <a href="#" onclick="showToast('Masthead: Master Perfumer: Atelier Bandung.'); return false;">MASTHEAD</a>
+          <span>|</span>
+          <a href="#" onclick="showToast('Visual Stories: Arsip dokumentasi film.'); return false;">VISUAL STORIES</a>
+          <span>|</span>
+          <a href="#" onclick="showToast('Privacy Information: UU PDP.'); return false;">PRIVACY INFORMATION</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Over Shopping Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <div class="cart-header-title">
+        <h3>TROLI WEWANGIAN</h3>
+        <span>ZEPHR ATELIER BAG</span>
+      </div>
+      <button class="cart-close-btn" id="cart-close-btn">&times;</button>
+    </div>
+    <div class="cart-items-list" id="cart-items-list"></div>
+    <div class="cart-footer">
+      <div class="cart-subtotal-row">
+        <span>SUBTOTAL:</span>
+        <span class="cart-subtotal-val" id="cart-subtotal">Rp 0</span>
+      </div>
+      <div class="cart-perk-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Gratis Ongkir Asuransi + 2 Sample Vials Eksklusif
+      </div>
+      <button class="btn-cart-checkout" id="cart-checkout-btn">
+        LANJUT KE PEMBAYARAN &rarr;
+      </button>
+    </div>
+  </aside>
+
+  <!-- Cinema Video Modal -->
+  <div class="cinema-modal-overlay" id="cinema-modal">
+    <div class="cinema-modal-card">
+      <div class="cinema-player-header">
+        <span class="cinema-film-title" id="cinema-title">ZEPHR: THE ALCHEMY OF MASCULINE SCENTS</span>
+        <button class="cinema-close-trigger" onclick="closeCinemaModal()">&times;</button>
+      </div>
+      <div class="cinema-video-viewport" id="cinema-viewport"></div>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="cart-drawer-overlay" id="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="brand-wrapper">
+      <div class="brand-logo-box">LOGO</div>
+      <span class="brand-title" style="color:#FFF;">ZEPHR</span>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="product.html">PRODUCT</a></li>
+      <li><a href="contact.html" class="active">CONTACT US</a></li>
+    </ul>
+    <div style="margin-top:auto; padding-top:20px; border-top:1px solid #23272F; font-size:0.75rem; color:#8E98A5;">
+      Bandung Atelier &bull; +62 895 2911 4752
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

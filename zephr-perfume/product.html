@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZEPHR &mdash; Haute Parfumerie Pour Homme | Product Catalog</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23090A0C%22/><text y=%22.75em%22 x=%2250%25%22 font-family=%22serif%22 font-weight=%22bold%22 text-anchor=%22middle%22 font-size=%2265%22 fill=%22%23C5A059%22>Z</text></svg>">
+</head>
+<body class="viewport-desktop">
+
+  <!-- Wireframe & Viewport Inspection Toolbar -->
+  <aside class="wireframe-toolbar">
+    <div class="toolbar-brand">
+      <span class="badge-masculine">PARFUM MASKULIN</span>
+      <span>ZEPHR ATELIER SPEC &bull; PRODUCT (10-GRID)</span>
+    </div>
+    <div class="toolbar-controls">
+      <div class="viewport-switchers">
+        <button class="btn-viewport active" data-viewport="desktop" title="Desktop 12-Column Layout">Desktop (12 Kolom)</button>
+        <button class="btn-viewport" data-viewport="tablet" title="Tablet 10-Column Layout">Tablet (10 Kolom)</button>
+        <button class="btn-viewport" data-viewport="mobile" title="Smartphone Layout">HP (Mobile)</button>
+      </div>
+      <label class="toggle-switch-wrapper" title="Tampilkan Panduan Grid Pink Wireframe 12 Kolom">
+        <span class="switch">
+          <input type="checkbox" id="wireframe-mode-toggle">
+          <span class="slider"></span>
+        </span>
+        <span>Grid Guides (Pink)</span>
+      </label>
+    </div>
+  </aside>
+
+  <!-- 12-Column Pink Wireframe Grid Overlay -->
+  <div class="wireframe-grid-overlay" aria-hidden="true">
+    <div class="overlay-container">
+      <div class="overlay-col" data-col="1"></div>
+      <div class="overlay-col" data-col="2"></div>
+      <div class="overlay-col" data-col="3"></div>
+      <div class="overlay-col" data-col="4"></div>
+      <div class="overlay-col" data-col="5"></div>
+      <div class="overlay-col" data-col="6"></div>
+      <div class="overlay-col" data-col="7"></div>
+      <div class="overlay-col" data-col="8"></div>
+      <div class="overlay-col" data-col="9"></div>
+      <div class="overlay-col" data-col="10"></div>
+      <div class="overlay-col" data-col="11"></div>
+      <div class="overlay-col" data-col="12"></div>
+    </div>
+  </div>
+
+  <div class="grid-spec-indicator" id="grid-spec-text">
+    <strong>Desktop Wireframe</strong> &bull; Gutter: 0.85 cm &bull; Column: 12 &bull; Margin: 8.47 cm &bull; 10-Product Grid
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top-row">
+        <!-- Logo Box + Brand Title -->
+        <a href="index.html" class="brand-wrapper">
+          <div class="brand-logo-box">LOGO</div>
+          <div class="brand-titles">
+            <span class="brand-title">ZEPHR</span>
+            <span class="brand-tagline">PARFUMS POUR HOMME &bull; BANDUNG</span>
+          </div>
+        </a>
+
+        <!-- Capsule Search Input in Header (Depicted in Product Wireframe) -->
+        <div class="header-search-bar">
+          <div class="search-pill-box">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+            </svg>
+            <input type="text" id="product-search-input" placeholder="Cari nama parfum, notes (oud, vetiver, kulit, ambar)..." aria-label="Search Fragrances">
+          </div>
+        </div>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <button class="lang-selector" id="lang-selector-btn" title="Ganti Bahasa">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            LANGUAGE : IDN
+          </button>
+          
+          <button class="icon-btn" title="Private Gentlemen Concierge" onclick="showToast('ZEPHR Concierge: Layanan Konsultasi Aktif.')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+            </svg>
+          </button>
+          
+          <button class="icon-btn" id="cart-open-btn" title="Lihat Troli Belanja">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4H6z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 01-8 0"/>
+            </svg>
+            <span class="cart-count-badge" style="display:none;">0</span>
+          </button>
+
+          <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" title="Menu Navigasi">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gold Navigation Bar -->
+    <nav class="gold-nav-bar">
+      <div class="container">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">HOME</a></li>
+          <li><a href="about.html" class="nav-link">ABOUT US</a></li>
+          <li><a href="product.html" class="nav-link active">PRODUCT</a></li>
+          <li><a href="contact.html" class="nav-link">CONTACT US</a></li>
+        </ul>
+        <div class="nav-scent-quote">
+          &ldquo;Koleksi 10 Mahakarya Parfum Maskulin&rdquo;
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content: Product with Left Sidebar matching Wireframe Spec -->
+  <main class="wireframe-page-wrapper">
+    <div class="container">
+      <div class="wireframe-layout-grid">
+        
+        <!-- Left Wireframe Sidebar: TREND, CATALOG >, SHOPPING CART > -->
+        <aside class="left-wireframe-sidebar">
+          
+          <!-- TREND Block (Filter by masculine scent families) -->
+          <div class="sidebar-block">
+            <h3 class="sidebar-title">
+              <span>TREND</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </h3>
+            <ul class="sidebar-list">
+              <li><a href="#" class="sidebar-link sidebar-perfume-filter" data-filter="leather">Smoky Leather &amp; Birch</a></li>
+              <li><a href="#" class="sidebar-link sidebar-perfume-filter" data-filter="oud">Malinau Agarwood &amp; Oud</a></li>
+              <li><a href="#" class="sidebar-link sidebar-perfume-filter" data-filter="woody">Java Vetiver &amp; Cedar</a></li>
+              <li><a href="#" class="sidebar-link sidebar-perfume-filter" data-filter="amber">Bourbon Amber &amp; Spice</a></li>
+              <li><a href="#" class="sidebar-link sidebar-perfume-filter" data-filter="fresh">Aquatic Noir &amp; Citrus</a></li>
+            </ul>
+          </div>
+
+          <!-- CATALOG > Block -->
+          <div class="sidebar-block">
+            <h3 class="sidebar-title">
+              <span>CATALOG &gt;</span>
+            </h3>
+            <ul class="sidebar-list">
+              <li><a href="#" class="sidebar-link sidebar-perfume-filter active" data-filter="all">&bull; Semua Koleksi (10 Parfum)</a></li>
+              <li><a href="#" class="sidebar-link sidebar-perfume-filter" data-filter="woody">&bull; Extrait de Parfum Series</a></li>
+              <li><a href="#" class="sidebar-link sidebar-perfume-filter" data-filter="oud">&bull; Private Reserve Rare</a></li>
+              <li><a href="#" class="sidebar-link sidebar-perfume-filter" data-filter="leather">&bull; Signature Noir Series</a></li>
+              <li><a href="#" class="sidebar-link sidebar-perfume-filter" data-filter="fresh">&bull; Modern Minimalist</a></li>
+            </ul>
+          </div>
+
+          <!-- SHOPPING CART > Block -->
+          <div class="sidebar-block">
+            <h3 class="sidebar-title">
+              <span>SHOPPING CART &gt;</span>
+            </h3>
+            <div class="sidebar-cart-box">
+              <p style="font-size: 0.72rem; color: #8E98A5; margin-bottom: 6px;">Ringkasan Pesanan:</p>
+              <div style="font-size: 0.95rem; font-weight: 800; color: #FFFFFF;" id="sidebar-cart-subtotal">Rp 0</div>
+              <button class="btn-sidebar-cart sidebar-open-cart-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4H6z"/><path d="M3 6h18"/>
+                </svg>
+                BUKA TROLI
+              </button>
+            </div>
+          </div>
+
+        </aside>
+
+        <!-- Right Main Column: Product Header + 10-Item Grid -->
+        <div class="home-main-content">
+          
+          <!-- Product Header & Category Filter Pills -->
+          <div class="product-catalog-header">
+            <div class="catalog-title-group">
+              <h2>KOLEKSI WEWANGIAN MASKULIN</h2>
+              <p>Konsentrasi minyak parfum 35% &bull; Ketahanan 14+ Jam &bull; Flacon Kristal Obsidian</p>
+            </div>
+            
+            <div class="catalog-filter-bar">
+              <button class="filter-chip active" data-filter="all">Semua (10)</button>
+              <button class="filter-chip" data-filter="leather">Kulit &amp; Tembakau</button>
+              <button class="filter-chip" data-filter="oud">Gaharu / Oud</button>
+              <button class="filter-chip" data-filter="woody">Vetiver &amp; Kayu</button>
+              <button class="filter-chip" data-filter="amber">Ambar &amp; Bourbon</button>
+              <button class="filter-chip" data-filter="fresh">Aquatic Segar</button>
+            </div>
+          </div>
+
+          <!-- Exact 10-Product Wireframe Grid (2 rows x 5 columns on Desktop) -->
+          <div class="product-ten-grid" id="product-ten-grid">
+            <!-- Dynamically populated by js/product.js with 10 masculine perfumes -->
+          </div>
+
+          <!-- Bottom Quality Guarantee Banner -->
+          <div style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 24px 28px; margin-top: 10px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+            <div style="display: flex; gap: 12px; align-items: center;">
+              <div style="width: 40px; height: 40px; border-radius: 50%; background: #F4F2EC; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--color-gold);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <h4 style="font-size: 0.82rem; font-weight: 700; color: var(--color-obsidian);">100% ASLI &amp; GARANSI AROMA</h4>
+                <p style="font-size: 0.72rem; color: var(--color-text-muted);">Sertifikat keaslian batch &amp; piramida aroma resmi.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; align-items: center;">
+              <div style="width: 40px; height: 40px; border-radius: 50%; background: #F4F2EC; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--color-gold);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </div>
+              <div>
+                <h4 style="font-size: 0.82rem; font-weight: 700; color: var(--color-obsidian);">PENGIRIMAN AMAN AMBER BOX</h4>
+                <p style="font-size: 0.72rem; color: var(--color-text-muted);">Kemasan anti-pecah bersegel lilin dari Bandung.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; align-items: center;">
+              <div style="width: 40px; height: 40px; border-radius: 50%; background: #F4F2EC; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--color-gold);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <h4 style="font-size: 0.82rem; font-weight: 700; color: var(--color-obsidian);">KETAHANAN 14 - 18 JAM</h4>
+                <p style="font-size: 0.72rem; color: var(--color-text-muted);">Konsentrasi Extrait 35% tanpa pengencer berlebih.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer (Exact Match to Wireframe Spec) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-row">
+        <h2 class="footer-brand-title">ZEPHR</h2>
+        <div class="footer-social-icons">
+          <a href="https://facebook.com" target="_blank" rel="noreferrer" class="social-icon-btn" title="Facebook">f</a>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" class="social-icon-btn" title="Instagram">&#9825;</a>
+          <a href="https://tiktok.com" target="_blank" rel="noreferrer" class="social-icon-btn" title="TikTok">&#9834;</a>
+          <a href="https://wa.me/6289529114752" target="_blank" rel="noreferrer" class="social-icon-btn" title="WhatsApp Concierge">&#128172;</a>
+        </div>
+      </div>
+
+      <div class="footer-columns-grid">
+        <div class="footer-about-col">
+          <p>
+            ZEPHR Parfums adalah atelier wewangian pria mewah berbasis di Bandung, Jawa Barat. Kami memadukan bahan alami paling langka di nusantara dan dunia dengan standar seni parfum haute-parfumerie untuk pria berkarakter tegas.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">MORE FROM ZEPHR &gt;</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT ZEPHR</a></li>
+            <li><a href="product.html">OUR PRODUCT</a></li>
+            <li><a href="contact.html">CONNECT WITH US</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">SEE MORE STORIES &gt;</h4>
+          <ul class="footer-links-list">
+            <li><a href="#" onclick="openCinemaModal('THE SCIENCE OF SILLAGE'); return false;">The Science of Scent Sillage</a></li>
+            <li><a href="#" onclick="openCinemaModal('HOW TO LAYER MASCULINE NOTES'); return false;">How to Layer Masculine Notes</a></li>
+            <li><a href="#" onclick="openCinemaModal('MASERASI ARCHIVES 2026'); return false;">Maceration Archives 2026</a></li>
+            <li><a href="#" onclick="openCinemaModal('HARVESTING JAVA VETIVER'); return false;">Harvesting Java Vetiver Root</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">PRIVATE CONCIERGE</h4>
+          <ul class="footer-links-list">
+            <li><a href="contact.html">Jl. Industri, Bandung, Jawa Barat</a></li>
+            <li><a href="tel:+6289529114752">+62 895 2911 4752</a></li>
+            <li><a href="mailto:cs@zephr.com">cs@zephr.com</a></li>
+            <li><span style="color:var(--color-gold); font-size:0.75rem;">Senin &ndash; Sabtu: 09:00 &ndash; 21:00 WIB</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-sub-bottom">
+        <div class="footer-region-badge">
+          <span class="region-indicator">Fashion &amp; Beauty &bull; Indonesia &gt;</span>
+          <span>&copy; 2026 ZEPHR Parfums Atelier Bandung. Hak Cipta Dilindungi.</span>
+        </div>
+        <div class="footer-legal-row">
+          <a href="#" onclick="showToast('User Agreement: Ketentuan layanan.'); return false;">USER AGREEMENT</a>
+          <span>|</span>
+          <a href="#" onclick="showToast('Privacy Policy: Kerahasiaan data.'); return false;">PRIVACY POLICY</a>
+          <span>|</span>
+          <a href="#" onclick="showToast('Accessibility: WCAG 2.1 AA.'); return false;">ACCESSIBILITY HELP</a>
+          <span>|</span>
+          <a href="#" onclick="showToast('Masthead: Bandung Atelier.'); return false;">MASTHEAD</a>
+          <span>|</span>
+          <a href="#" onclick="showToast('Visual Stories: Editorial.'); return false;">VISUAL STORIES</a>
+          <span>|</span>
+          <a href="#" onclick="showToast('Privacy Information: UU PDP.'); return false;">PRIVACY INFORMATION</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Over Shopping Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <div class="cart-header-title">
+        <h3>TROLI WEWANGIAN</h3>
+        <span>ZEPHR ATELIER BAG</span>
+      </div>
+      <button class="cart-close-btn" id="cart-close-btn">&times;</button>
+    </div>
+    <div class="cart-items-list" id="cart-items-list"></div>
+    <div class="cart-footer">
+      <div class="cart-subtotal-row">
+        <span>SUBTOTAL:</span>
+        <span class="cart-subtotal-val" id="cart-subtotal">Rp 0</span>
+      </div>
+      <div class="cart-perk-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Gratis Ongkir Asuransi + 2 Sample Vials Eksklusif
+      </div>
+      <button class="btn-cart-checkout" id="cart-checkout-btn">
+        LANJUT KE PEMBAYARAN &rarr;
+      </button>
+    </div>
+  </aside>
+
+  <!-- Olfactory Quick View Modal -->
+  <div class="quickview-modal-overlay" id="quickview-modal">
+    <div class="quickview-modal-box">
+      <button class="quickview-close-btn" onclick="closeQuickView()">&times;</button>
+      <div class="quickview-grid">
+        <div class="quickview-media" id="quickview-media"></div>
+        <div class="quickview-content" id="quickview-details"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cinema Video Modal -->
+  <div class="cinema-modal-overlay" id="cinema-modal">
+    <div class="cinema-modal-card">
+      <div class="cinema-player-header">
+        <span class="cinema-film-title" id="cinema-title">ZEPHR: THE ALCHEMY OF MASCULINE SCENTS</span>
+        <button class="cinema-close-trigger" onclick="closeCinemaModal()">&times;</button>
+      </div>
+      <div class="cinema-video-viewport" id="cinema-viewport"></div>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="cart-drawer-overlay" id="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="brand-wrapper">
+      <div class="brand-logo-box">LOGO</div>
+      <span class="brand-title" style="color:#FFF;">ZEPHR</span>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="product.html" class="active">PRODUCT</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+    </ul>
+    <div style="margin-top:auto; padding-top:20px; border-top:1px solid #23272F; font-size:0.75rem; color:#8E98A5;">
+      Bandung Atelier &bull; +62 895 2911 4752
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>
